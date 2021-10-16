@@ -1,16 +1,22 @@
-# This is a sample Python script.
+from git import Repo
+from Components.github_utils import *
+from Components.file_utils import *
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+user_name = "ankurdivekar"
+repo_name = "Heimdall"
+file_name = "ID_Manager.py"
 
+# Get url for public repo
+git_url = get_repo_url(user_name, repo_name)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# Set path for local temporary copy of repo
+tmp_repo_path = 'Data/tmp_repo/Level_1'
 
+# Clone repo locally
+# Repo.clone_from(git_url, tmp_repo_path)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+# Generate some files to test directory stucture
+create_test_submission(tmp_repo_path)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# Delete test submission
+# clear_repo_path(tmp_repo_path)
