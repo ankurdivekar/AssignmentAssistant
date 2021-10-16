@@ -12,6 +12,6 @@ def create_test_submission(repo_path):
         week_dir = f'{repo_path}/Week_{week:02}'
         Path(week_dir).mkdir(parents=True, exist_ok=True)
         for submission in range(1, 8):
-            file_path = f'{repo_path}/Week_{week:02}/Assignment{submission:02}.py'
+            file_path = f'{week_dir}/Assignment{submission:02}.py'
             with open(file_path, 'w') as fp:
                 pass
