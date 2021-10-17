@@ -2,7 +2,6 @@ import streamlit as st
 import git
 from git import Repo
 import requests
-from Components.checking_utils import check_all_assignments
 from Components.file_utils import clear_repo_path
 
 st.title('Assignment Checker')
