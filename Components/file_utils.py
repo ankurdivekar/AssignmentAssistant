@@ -3,6 +3,7 @@ import shutil
 
 
 def clear_repo_path(repo_path):
+    Path(repo_path).mkdir(parents=True, exist_ok=True)
     shutil.rmtree(repo_path)
 
 
